@@ -29,7 +29,7 @@ color: white;
 
 .container {
     display: flex;
-    width: calc(25px + 75vw;)
+    width: calc(25px + 75vw);
     border: none;
     justify-content:center;
     padding-bottom: 4vh;
