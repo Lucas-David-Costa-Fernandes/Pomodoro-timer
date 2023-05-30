@@ -66,8 +66,10 @@ color: white;
         text-align: center;
     }
 
-div small {
-    margin: auto;
+.errorText {
+color: rgb(224, 45, 45);
+margin: auto;
+
 }
 
 
@@ -75,7 +77,6 @@ div small {
     color: rgb(255, 255, 255);
     display: flex;
     height: calc(-150px + 50vh);
-    min-height:40vh;
     background: rgba(255, 255, 255, 0);
     border-radius: 50px;
     -webkit-appearance: none;
@@ -86,17 +87,21 @@ div small {
     font-size: 8vi;
     text-align: center;
     border: none;
+    padding: 0px;
 }
 
     .form-control[type=number]::placeholder {
         color: rgba(255, 255, 255, 0.116);
         text-decoration: underline 3px rgba(255, 255, 255, 0.116);
         text-underline-offset: 10px;
+        padding: 0px;
     
     }
 
     .form-control[type=number]::-webkit-inner-spin-button {
         -webkit-appearance: none;
+        height: 0px;
+        padding: 0px;
     }
 
     .form-control[type=number]:focus {
