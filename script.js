@@ -41,7 +41,7 @@ function actionStatus(){
     if(repsValue >= 2){
         document.getElementById('tittleReps').innerHTML = `${repsValue} Reps left`
     } if(repsValue <= 1){
-        document.getElementById('tittleReps').innerHTML = `${repsValue} Reps left. Last one!!!`
+        document.getElementById('tittleReps').innerHTML = `${repsValue} Rep left. Last one!!!`
     }
 
     let tittle = document.getElementById('timerActive')

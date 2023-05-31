@@ -21,10 +21,17 @@ box-shadow: 0 5px 10px #242529;
 color: white;
 
 }
-    header p {
+    .topText {
         margin: auto;
-        font-size:calc(12px + 1.2vw);
+        font-size: calc(12px + 1.2vw);
     
+    }
+
+    .homeButton {
+        height: calc(15px + 30px + 1.2vw);
+        width: calc(35px + 1.2vw);
+        padding-top: 15px;
+        padding-left: 5px;
     }
 
 .container {
