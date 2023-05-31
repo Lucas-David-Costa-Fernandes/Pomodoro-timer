@@ -32,19 +32,15 @@ function start(){
 
 function actionStatus(){
 
+    document.getElementById('school').play();
     
     var repsValue = Number(localStorage.getItem('reps'))
-    
-    
-
   
     console.log(repsValue)
 
-
-
-    if(repsValue >= 1){
+    if(repsValue >= 2){
         document.getElementById('tittleReps').innerHTML = `${repsValue} Reps left`
-    } if(repsValue < 1){
+    } if(repsValue <= 1){
         document.getElementById('tittleReps').innerHTML = `${repsValue} Reps left. Last one!!!`
     }
 
@@ -72,19 +68,20 @@ function actionStatus(){
         document.getElementById('secondsOk').innerHTML = seconds
 
         if(seconds <= 0){
-            if(min <= 0 ){
-                if (repsValue <= 0){
-                    clearInterval(minInterval)
-                    clearInterval(secInterval)
-                    localStorage.clear
-
-                    document.getElementById('end').style.setProperty('display', 'block');
-                    document.getElementById('timer').style.setProperty('display', 'none')
-                }
+            if (repsValue <= 1){
+                    
                 clearInterval(minInterval)
                 clearInterval(secInterval)
+                localStorage.clear
 
-                BreakTime()
+                endScreen()
+            }
+                if(min <= 0 && repsValue > 1){
+                
+                    clearInterval(minInterval)
+                    clearInterval(secInterval)
+
+                    BreakTime()
             }
 
             seconds = 60
@@ -94,6 +91,8 @@ function actionStatus(){
 }
 
 function BreakTime(){
+
+    document.getElementById('boxBell').play();
     
     let tittle = document.getElementById('timerActive')
     tittle.innerHTML = "Break Time!"
@@ -132,4 +131,13 @@ function BreakTime(){
             seconds = 60
         }
     }
+}
+
+function endScreen(){
+
+    
+
+    document.getElementById('end').style.setProperty('display', 'block');
+    document.getElementById('timer').style.setProperty('display', 'none')
+    document.getElementById('party').play();
 }
